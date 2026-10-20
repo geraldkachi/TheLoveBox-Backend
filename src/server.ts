@@ -7,7 +7,7 @@ dns.setServers(['8.8.8.8', '8.8.4.4']);
 import app from "./app";
 import { connectDB } from "./config/db";
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 connectDB()
   .then(() => {
@@ -17,3 +17,4 @@ connectDB()
     console.error("Failed to connect to MongoDB", err);
     process.exit(1);
   });
+ 
