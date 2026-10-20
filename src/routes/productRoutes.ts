@@ -6,7 +6,7 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
-} from "../controllers/productController";
+} from "../controllers/productController"; 
 import { protect, requireRole } from "../middleware/auth";
 import { upload } from "../config/cloudinary";
 
