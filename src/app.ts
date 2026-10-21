@@ -17,7 +17,7 @@ app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(compression() as any);
 app.use(
   cors({
-    origin: [process.env.CUSTOMER_APP_URL || "", process.env.ADMIN_APP_URL || "", "https://the-love-box-backend.vercel.app"],
+    origin: [process.env.CUSTOMER_APP_URL || "", process.env.ADMIN_APP_URL || "", "https://the-love-box-backend.vercel.app", "https://the-love-box-admin.vercel.app"],
     credentials: true,
   })
 );
