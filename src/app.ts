@@ -10,7 +10,7 @@ import orderRoutes from "./routes/orderRoutes";
 import paymentRoutes from "./routes/paymentRoutes";
 import searchRoutes from "./routes/searchRoutes";
 import { notFound, errorHandler } from "./middleware/errorHandler";
-
+ 
 const app = express();
 
 app.use(helmet({ crossOriginResourcePolicy: false }));
