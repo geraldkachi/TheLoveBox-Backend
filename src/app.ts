@@ -18,8 +18,8 @@ app.use(compression() as any);
 app.use(
   cors({
     origin: [
-      process.env.CUSTOMER_APP_URL || "", 
-      process.env.ADMIN_APP_URL || "",
+       "http://localhost:3000", 
+      "http://localhost:5173",
        "https://the-love-box-customer.vercel.app",
        "https://the-love-box-admin.vercel.app",
       ],
