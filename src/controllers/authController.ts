@@ -64,3 +64,9 @@ export const getMe = asyncHandler(async (req: Request, res: Response) => {
   }
   res.json({ id: user._id, name: user.name, email: user.email, role: user.role });
 });
+
+export const logout = asyncHandler(async (req: Request, res: Response) => {
+  // If you were using httpOnly cookies, you would clear the cookie here:
+  // res.cookie("jwt", "", { httpOnly: true, expires: new Date(0) });
+  res.status(200).json({ message: "Logged out successfully" });
+});

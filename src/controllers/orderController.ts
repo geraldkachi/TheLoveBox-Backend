@@ -60,3 +60,16 @@ export const updateOrderStatus = asyncHandler(async (req: Request, res: Response
   await order.save();
   res.json(order);
 });
+
+
+
+// export const trackOrder = asyncHandler(async (req: Request, res: Response) => {
+//   const { orderNumber } = req.params;
+//   const order = await Order.findOne({ orderNumber }).populate("items.product", "name images slug");
+  
+//   if (!order) {
+//     res.status(404);
+//     throw new Error("We couldn't find an order with that number.");
+//   }
+//   res.json(order);
+// });
