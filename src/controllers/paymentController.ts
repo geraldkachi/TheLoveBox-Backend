@@ -53,3 +53,33 @@ export const verifyPayment = asyncHandler(async (req: Request, res: Response) =>
     res.status(400).json({ verified: false, message: "Payment could not be verified." });
   }
 });
+
+
+// export const verifyPayment = asyncHandler(async (req: Request, res: Response) => {
+//   const { reference } = req.params;
+
+//   const response = await fetch(`${PAYSTACK_BASE}/transaction/verify/${reference}`, {
+//     headers: { Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}` },
+//   });
+//   const data = await response.json();
+
+//   if (data.status && data.data.status === "success") {
+//     const orderNumber = data.data.metadata?.orderNumber;
+//     if (orderNumber) {
+//       const order = await Order.findOne({ orderNumber });
+//       if (order && order.status === "pending_payment") {
+//         order.status = "paid";
+//         order.paystackReference = reference;
+//         order.trackingHistory.push({ 
+//           status: "paid", 
+//           note: "Payment confirmed via Paystack.", 
+//           at: new Date() 
+//         });
+//         await order.save();
+//       }
+//     }
+//     res.json({ verified: true, data: data.data });
+//   } else {
+//     res.status(400).json({ verified: false, message: "Payment could not be verified." });
+//   }
+// });
