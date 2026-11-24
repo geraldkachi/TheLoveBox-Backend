@@ -11,7 +11,7 @@ export const emailTheme = {
   line: "#ECE4D8",
   brandName: process.env.BRAND_NAME || "The Love Box",
   get siteUrl() {
-    return (process.env.CUSTOMER_APP_URL || "").split(",")[0].trim().replace(/\/$/, "") || "https://the-love-box-customer.vercel.app";
+    return (process.env.CUSTOMER_APP_URL || "").split(",")[0].trim().replace(/\/$/, "") || "https://the-love-box-customer.vercel.app" || "https://the-love-box-customer.vercel.app";
   },
   get logoUrl() {
     return process.env.EMAIL_LOGO_URL || `${this.siteUrl}/brand/logo-email.png`;

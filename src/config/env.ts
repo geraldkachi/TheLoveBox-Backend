@@ -43,6 +43,7 @@ export const config = {
         "http://localhost:3000",
         "http://localhost:5173",
         "https://the-love-box-customer.vercel.app",
+        "https://www.theloveboxgifts.com/",
         "https://the-love-box-admin.vercel.app",
         ...list(process.env.CUSTOMER_APP_URL),
         ...list(process.env.ADMIN_APP_URL),
